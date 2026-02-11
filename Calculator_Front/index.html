@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>Cabeçalho</header>
+    <div class="calculator">
+        <div class="result">0</div>
+        <div class="buttons">
+            <div class="numeros">
+                <button type="button" onclick="c.add(1)">1</button>
+                <button type="button" onclick="c.add(2)">2</button>
+                <button type="button" onclick="c.add(3)">3</button>
+
+                <button type="button" onclick="c.add(4)">4</button>
+                <button type="button" onclick="c.add(5)">5</button>
+                <button type="button" onclick="c.add(6)">6</button>
+
+                <button type="button" onclick="c.add(7)">7</button>
+                <button type="button" onclick="c.add(8)">8</button>
+                <button type="button" onclick="c.add(9)">9</button>
+
+                <button type="button" onclick="c.add(0)">0</button>
+                <button type="button" onclick="c.getResult()">=</button>
+                <button type="button" onclick="c.clearResult()">C</button>
+            </div>
+
+            <div class="operations">
+                <button type="button" onclick="c.addOperation('+')">+</button>
+                <button type="button" onclick="c.addOperation('-')">-</button>
+                <button type="button" onclick="c.addOperation('*')">*</button>
+                <button type="button" onclick="c.addOperation('/')">/</button>
+                <button type="button" onclick="c.addOperation('(')">(</button>
+                <button type="button" onclick="c.addOperation(')')">)</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./Script/script.js"></script>
+</body>
+</html>
