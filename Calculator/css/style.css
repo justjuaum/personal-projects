@@ -1,20 +1,20 @@
 :root{
     --BoxS: rgba(0,0,0,.4);
-    --Result: 
+    --Result: rgb(202, 202, 221);
 }
 body{
     margin: 0px;
 }
 .calculator{
     width: 320px;
-    margin: 25% auto;
+    margin: 30px auto;
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 10px 30px var(--BoxS);
 }
 
 .result{
-    background-color: rgb(202, 202, 221);
+    background-color: var(--Result);
     padding: 10px;
     text-align: right;
     margin-bottom: 10px;
@@ -73,4 +73,13 @@ button:hover{
 @keyframes changeColor{
     0% {transform: scale(1.0)}
     100% {transform: scale(1.2)}
+}
+header{
+    background-color: #ff9500;
+    text-align: center;
+    padding: 20px;
+    font-size: 2em;
+}
+footer{
+    text-align: center;
 }

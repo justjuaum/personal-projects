@@ -5,6 +5,7 @@ class Calculator{
         if(result.innerHTML !== "0"){
             return result.innerHTML += item;
         }
+
         result.innerHTML = "";
         return result.innerHTML += item;
     }
@@ -13,16 +14,19 @@ class Calculator{
     addOperation(item){
         const result = document.querySelector(".result");
         const lastEntrie = this.checkLastEntrie();
-        
-        if(lastEntrie){
-            let modifiedResult = this.#removeLastEntrie();
+
+        if(item === ")" && lastEntrie.lastEntrie !== "+"){
+            return result.innerHTML += ")"; 
+        }
+
+        if(lastEntrie.bool){
+            let modifiedResult = this.removeLastEntrie();
             switch(item){
                 case "+" : modifiedResult += "+"; break;
                 case "-" : modifiedResult += "-"; break;
                 case "*" : modifiedResult += "*"; break;
                 case "/" : modifiedResult += "/"; break;
                 case "(" : modifiedResult += "*("; break;
-                case ")" : modifiedResult += ")"; break;;
             }
             return result.innerHTML = modifiedResult;
         }
@@ -33,7 +37,6 @@ class Calculator{
             case "*" : return result.innerHTML += "*";
             case "/" : return result.innerHTML += "/";
             case "(" : return result.innerHTML += "*(";
-            case ")" : return result.innerHTML += ")";
         }
     }
 
@@ -44,33 +47,30 @@ class Calculator{
         for(let char of result){
             lastEntrie = char;
         }
-        console.log(lastEntrie);
         switch(lastEntrie){
-            case "+" : return true;
-            case "-" : return true;
-            case "*" : return true;
-            case "/" : return true;
-            case "(" : return true;
-            default : return false;
+            case "+" : return {bool: true, lastEntrie};
+            case "-" : return {bool: true, lastEntrie};
+            case "*" : return {bool: true, lastEntrie};
+            case "/" : return {bool: true, lastEntrie};
+            case "(" : return {bool: true, lastEntrie};
+            default : return {bool: false, lastEntrie};
         }
     }
 
     //remove the last entrie in result element, if is a ( remove * too.
-    #removeLastEntrie(){
+    removeLastEntrie(){
         const result = document.querySelector(".result").innerHTML;
         let currentResult = "";
-        let lastEntrie = this.checkLastEntrie();
+        let lastEntrie = this.checkLastEntrie().lastEntrie;
 
         if(lastEntrie == "("){
             for(let i = 0; i < result.length-2; i++){
-                currentResult += result[i];
-            }
-        }else{
-            for(let i = 0; i < result.length-1; i++){
-                currentResult += result[i];
+                return currentResult += result[i];
             }
         }
-        return currentResult;
+        for(let i = 0; i < result.length-1; i++){
+            return currentResult += result[i];
+        }
     }
 
     clearResult(){
@@ -80,8 +80,13 @@ class Calculator{
 
     getResult(){
         const result = document.querySelector(".result");
-        return result.innerHTML = eval(result.innerHTML);
+        try{
+            return result.innerHTML = eval(result.innerHTML);
+        } catch(e){
+            return result.innerHTML = "Error."
+        }
     }
 }
 
 const c = new Calculator;
+
