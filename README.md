@@ -15,7 +15,7 @@ Os códigos podem conter diferentes abordagens para o mesmo problema, justamente
 <p>O objetivo final é consolidar um portfólio consistente, que reflita habilidades técnicas, capacidade de resolução de problemas, organização de código e entendimento de conceitos fundamentais da engenharia de software.</p>
 
 <h2>Gestão de Versão</h2>
-<p>A gestão de versão deste repositório segue o padrão <strong>SemVer (Semantic Versioning)</strong>, no formato:</p>
+<p>A gestão de versão ocorrerá por projeto seguindo o padrão <strong>SemVer (Semantic Versioning)</strong>, no formato:</p>
 <p><strong>MAJOR.MINOR.PATCH</strong></p>
 
 <ul>
