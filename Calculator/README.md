@@ -4,7 +4,7 @@
 <p>Este projeto consiste no desenvolvimento de uma calculadora básica e funcional.</p>
 <hr>
 
-<h2>Versão atual: 0.0.2</h2>
+<h2>Versão atual: 0.0.3</h2>
 <hr>
 
 <h2>Tecnologias utilizadas</h2>
@@ -22,6 +22,16 @@
 </p>
 
 <h2>Notas de atualização</h2>
+<h3>Versão 0.0.3</h3>
+<p>Refatoração da lógica na lógica de substituição e checagem de última entrada, além da inclusão do metódo remove e atualização do front</p>
+
+<p><b>Bugs conhecidos:</b></p>
+<ul>
+  <li>
+    É possível adicionar <b>)</b> em qualquer parte do código,
+    o que gera erro no cálculo. Exemplo:
+    <code>0)</code> ou <code>1+2)</code> Nota: A conotação deste bug foi mantida observando que como agora existe um botão de apagar a última entrada, o usuário pode corrigir manualmente. Em caso de erro o mesmo é informado no campo result.
+  </li>
 
 <h3>Versão 0.0.2</h3>
 <p>Refatoração da lógica na parte de inclusão de operadores.</p>

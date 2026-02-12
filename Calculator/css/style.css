@@ -1,15 +1,16 @@
 :root{
-    --BoxS: rgba(0,0,0,.4);
+    --BoxS: rgba(59, 59, 59, 0.4);
     --Result: rgb(202, 202, 221);
 }
 body{
     margin: 0px;
 }
 .calculator{
-    width: 320px;
+    width: 300px;
     margin: 30px auto;
     padding: 20px;
     border-radius: 12px;
+    background: rgb(221, 221, 221);
     box-shadow: 0 10px 30px var(--BoxS);
 }
 
@@ -23,8 +24,8 @@ body{
 
     font-size: 3em;
     align-content: flex-end;
-    overflow: hidden;
-    text-overflow: clip;
+    overflow: auto;
+    overflow-wrap: anywhere;
 }
 
 .buttons{
@@ -33,7 +34,6 @@ body{
     display: grid;
     grid-template-columns: 3fr 1fr;
     gap: 10px;
-
 }
 
 .numeros{
@@ -49,7 +49,7 @@ body{
 }
 
 button{
-    font-size: 2em;
+    font-size: 1em;
     padding: 20px;
     border: none;
     border-radius: 20px;
