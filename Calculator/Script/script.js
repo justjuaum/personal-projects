@@ -7,7 +7,6 @@ class Calculator{
             return result.innerHTML += item;
         }
 
-
         return result.innerHTML += item;
     }
     
