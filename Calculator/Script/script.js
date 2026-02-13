@@ -6,7 +6,6 @@ class Calculator{
             result.innerHTML = "";
             return result.innerHTML += item;
         }
-
         return result.innerHTML += item;
     }
     
@@ -93,7 +92,6 @@ class Calculator{
         for(let i = 0; i < result.innerHTML.length-1; i++){
             removeLast += result.innerHTML[i];
         }
-
         result.innerHTML = removeLast;
     }
 }
